@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-16 12:51:05.519216",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "status",
+  "remarks",
+  "inspected_ppes_in_nos",
+  "found_ok_in_nos",
+  "rejected_ppes_in_nos",
+  "quantity_required_in_first_aid_box",
+  "quantity_available_in_first_aid_box_during_inspection",
+  "added_quantity",
+  "expiry_date",
+  "total_quantity_in_first_aid_box_after_addition",
+  "required_quantity_to_be_purchased"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "reqd": 1
+  },
+  {
+   "default": "Yes",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Yes\nNo"
+  },
+  {
+   "default": "N/A",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspected_ppes_in_nos",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Inspected PPEs in Nos"
+  },
+  {
+   "fieldname": "found_ok_in_nos",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Found Ok In Nos"
+  },
+  {
+   "fieldname": "rejected_ppes_in_nos",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Rejected PPEs In Nos"
+  },
+  {
+   "fieldname": "quantity_required_in_first_aid_box",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Quantity Required In First Aid Box"
+  },
+  {
+   "fieldname": "quantity_available_in_first_aid_box_during_inspection",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Quantity Available In First Aid Box During Inspection"
+  },
+  {
+   "fieldname": "added_quantity",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Added Quantity"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "total_quantity_in_first_aid_box_after_addition",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total Quantity In First Aid Box After Addition"
+  },
+  {
+   "fieldname": "required_quantity_to_be_purchased",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Required Quantity To Be Purchased"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-16 12:51:05.519216",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Inspection Checklist Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:custom_inspection_checklist_type",
+ "creation": "2026-04-16 12:51:24.862943",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "applicable",
+  "custom_inspection_checklist_type",
+  "inspection_template_name",
+  "column_break_evrf",
+  "custom_activity_acronym",
+  "activity_type",
+  "column_break_rlwk",
+  "upload_checklist",
+  "section_break_zbzk",
+  "checklist"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "applicable",
+   "fieldtype": "Check",
+   "label": "Applicable"
+  },
+  {
+   "fieldname": "custom_inspection_checklist_type",
+   "fieldtype": "Link",
+   "label": "Inspection Activity Template",
+   "options": "HSE Activity",
+   "unique": 1
+  },
+  {
+   "fieldname": "inspection_template_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Inspection Template Name"
+  },
+  {
+   "fieldname": "column_break_evrf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_activity_acronym",
+   "fieldtype": "Data",
+   "label": "Activity Acronym"
+  },
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "label": "Activity Type",
+   "options": "\nInspection\nAudit\nWalkthrough"
+  },
+  {
+   "fieldname": "column_break_rlwk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:\ndoc.custom_inspection_checklist_type==\"Inspection-Fire Extinguisher Inspection Checklist\" \n|| doc.custom_inspection_checklist_type==\"Inspection-Fire Bucket Inspection Checklist\" \n|| doc.custom_inspection_checklist_type==\"Inspection-Earth pit Register\"",
+   "fieldname": "upload_checklist",
+   "fieldtype": "Button",
+   "label": "Upload Checklist"
+  },
+  {
+   "fieldname": "section_break_zbzk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "checklist",
+   "fieldtype": "Table",
+   "label": "Checklist",
+   "options": "Checklist"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 12:51:24.862943",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "HSE Checklist Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

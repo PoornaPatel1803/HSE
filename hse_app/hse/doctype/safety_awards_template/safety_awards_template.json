@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:award_category",
+ "creation": "2026-04-16 12:48:51.811292",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "award_category",
+  "award_type",
+  "award_checklist"
+ ],
+ "fields": [
+  {
+   "fieldname": "award_category",
+   "fieldtype": "Data",
+   "label": "Award Category",
+   "unique": 1
+  },
+  {
+   "fieldname": "award_type",
+   "fieldtype": "Select",
+   "label": "Award Type",
+   "options": "External Awards (To Company)\nInternal Awards - BY HO\nInternal Awards - By Heeru Site\nExternal Awards (To Individual)"
+  },
+  {
+   "fieldname": "award_checklist",
+   "fieldtype": "Table",
+   "label": "Award Checklist",
+   "options": "Award Questions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 12:48:51.811292",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Safety Awards Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
