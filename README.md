@@ -1,2 +1,0 @@
-# HSE
-Health : Safety : Environment 
