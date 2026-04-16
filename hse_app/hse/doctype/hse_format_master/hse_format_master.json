@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:format_number",
+ "creation": "2026-04-16 12:44:20.691927",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "format_number",
+  "frequency",
+  "applicability",
+  "mail_should_be_sent",
+  "column_break_wtll",
+  "description",
+  "module",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "format_number",
+   "fieldtype": "Data",
+   "label": "Format Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "Daily\nStarting of Project\nNew Project / New activity\nWeekly\nMonthly\nQuarterly\n6 months\nAs applicable\nAs and When Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "applicability",
+   "fieldtype": "Check",
+   "label": "Applicability"
+  },
+  {
+   "default": "0",
+   "fieldname": "mail_should_be_sent",
+   "fieldtype": "Check",
+   "label": "Mail should be sent"
+  },
+  {
+   "fieldname": "column_break_wtll",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "module",
+   "fieldtype": "Data",
+   "label": "Module"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 12:44:20.691927",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "HSE Format Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
