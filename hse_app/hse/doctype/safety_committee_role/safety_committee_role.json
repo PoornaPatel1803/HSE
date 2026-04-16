@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:role",
+ "creation": "2026-04-16 12:43:58.616384",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "applicable"
+ ],
+ "fields": [
+  {
+   "fieldname": "role",
+   "fieldtype": "Data",
+   "label": "Role",
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "applicable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Applicable"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 12:43:58.616384",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Safety Committee Role",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "role"
+}
