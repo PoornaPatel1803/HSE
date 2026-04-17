@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2026-04-16 18:20:50.188210",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "format_number",
+  "responsibility",
+  "frequency",
+  "applicability",
+  "mail_should_be_sent",
+  "approved_by",
+  "issued_by",
+  "column_break_wtll",
+  "description",
+  "module",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "format_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Format Number",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsibility",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Responsibility",
+   "options": "EHS Lead\nProject Co-ordinator\nProject Manager",
+   "reqd": 1
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Frequency",
+   "options": "Daily\nStarting of Project\nNew Project / New activity\nWeekly\nMonthly\nQuarterly\n6 months\nAs applicable\nAs and When Required",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "applicability",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Applicability"
+  },
+  {
+   "default": "0",
+   "fieldname": "mail_should_be_sent",
+   "fieldtype": "Check",
+   "label": "Mail should be sent"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved by",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "issued_by",
+   "fieldtype": "Link",
+   "label": "Issued by",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_wtll",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "module",
+   "fieldtype": "Data",
+   "label": "Module",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-16 18:20:50.188210",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Project HSE Format",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

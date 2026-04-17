@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-16 18:23:14.847728",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "walkthrough_area",
+  "planned_date",
+  "observations",
+  "status",
+  "column_break_gzbv",
+  "conducted_by",
+  "completion_date",
+  "corrective_actions"
+ ],
+ "fields": [
+  {
+   "fieldname": "walkthrough_area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Walkthrough Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "label": "Planned Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "observations",
+   "fieldtype": "Small Text",
+   "label": "Observations"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nCompleted"
+  },
+  {
+   "fieldname": "column_break_gzbv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Link",
+   "label": "Conducted By",
+   "options": "Project Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "corrective_actions",
+   "fieldtype": "Small Text",
+   "label": "Corrective Actions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-16 18:23:14.847728",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "HSE Walkthrough Plan",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

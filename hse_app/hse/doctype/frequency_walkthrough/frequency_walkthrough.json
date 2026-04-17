@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-17 10:48:25.586810",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_type",
+  "activity_name",
+  "template",
+  "applicability",
+  "equipment",
+  "equipment_name",
+  "frequency"
+ ],
+ "fields": [
+  {
+   "default": "Walkthrough",
+   "fieldname": "activity_type",
+   "fieldtype": "Data",
+   "label": "Activity Type"
+  },
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "options": "HSE Activity"
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "label": "Template",
+   "link_filters": "[[\"HSE Checklist Template\",\"activity_type\",\"=\",\"Walkthrough\"]]",
+   "options": "HSE Checklist Template"
+  },
+  {
+   "default": "0",
+   "fieldname": "applicability",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Applicability"
+  },
+  {
+   "fieldname": "equipment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Serialised Equipment",
+   "options": "Serial No"
+  },
+  {
+   "fetch_from": "equipment.item_name",
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Equipment Name"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Frequency",
+   "options": "Daily\nMonthly\nWeekly\nAs applicable\nAs and When Required\nNew Project / New activity"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-17 10:48:25.586810",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Frequency Walkthrough",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

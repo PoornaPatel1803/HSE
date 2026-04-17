@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-16 18:21:54.706826",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "planning_type",
+  "inspection_type",
+  "inspector",
+  "planned_date",
+  "findings_summary",
+  "report_reference",
+  "column_break_xlhp",
+  "inspection_area",
+  "completion_date",
+  "status",
+  "corrective_actions"
+ ],
+ "fields": [
+  {
+   "fieldname": "planning_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Planning Type",
+   "options": "Internal\nExternal\nThird-Party",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inspection Type",
+   "options": "Internal\nExternal\nThird-Party",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Inspector",
+   "options": "Project Employee"
+  },
+  {
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "label": "Planned Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "findings_summary",
+   "fieldtype": "Small Text",
+   "label": "Findings Summary"
+  },
+  {
+   "fieldname": "report_reference",
+   "fieldtype": "Attach",
+   "label": "Report Reference"
+  },
+  {
+   "fieldname": "column_break_xlhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inspection_area",
+   "fieldtype": "Data",
+   "label": "Inspection Area"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Planned\nIn Progress\nCompleted\nOverdue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "corrective_actions",
+   "fieldtype": "Small Text",
+   "label": "Corrective Actions"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-16 18:21:54.706826",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "HSE Inspection Plan",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

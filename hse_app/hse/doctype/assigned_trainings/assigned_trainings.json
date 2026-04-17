@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-16 18:20:28.624520",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "training",
+  "project",
+  "employee",
+  "employee_id",
+  "create_training_event",
+  "version",
+  "date_assigned",
+  "completion_date",
+  "score",
+  "certificate",
+  "mandatory",
+  "column_break_jtlc",
+  "priorty",
+  "status",
+  "source",
+  "frequency",
+  "training_event"
+ ],
+ "fields": [
+  {
+   "fieldname": "training",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Training",
+   "options": "Training Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Project Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee",
+   "fetch_if_empty": 1,
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID"
+  },
+  {
+   "fieldname": "create_training_event",
+   "fieldtype": "Button",
+   "label": "Create Training Event"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "date_assigned",
+   "fieldtype": "Date",
+   "label": "Date Assigned"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Data",
+   "label": "Score"
+  },
+  {
+   "fieldname": "certificate",
+   "fieldtype": "Attach",
+   "label": "Certificate"
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory"
+  },
+  {
+   "fieldname": "column_break_jtlc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priorty",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priorty",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Designated\nExtra"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Int",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "label": "Training Event",
+   "options": "Training Event"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-16 18:20:28.624520",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Assigned Trainings",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

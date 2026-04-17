@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-16 18:21:09.621338",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project_employee",
+  "employee_name",
+  "designation",
+  "column_break_kkzo",
+  "committee_role",
+  "tenure_from",
+  "tenure_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project Employee",
+   "options": "Project Employee"
+  },
+  {
+   "fetch_from": "project_employee.custom_employee_name",
+   "fetch_if_empty": 1,
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "project_employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation"
+  },
+  {
+   "fieldname": "column_break_kkzo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "committee_role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Committee Role",
+   "options": "Safety Committee Role"
+  },
+  {
+   "fieldname": "tenure_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tenure From"
+  },
+  {
+   "fieldname": "tenure_to",
+   "fieldtype": "Date",
+   "label": "Tenure To"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-16 18:21:09.621338",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "HSE Safety Commitee",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

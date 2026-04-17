@@ -1,42 +1,48 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:type_of_waste",
- "creation": "2026-04-16 11:25:12.561860",
+ "autoname": "format:{project}-{month}-{year}",
+ "creation": "2026-04-16 17:43:04.559156",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "type_of_waste",
-  "unit",
-  "mandatory"
+  "project",
+  "month",
+  "year",
+  "report_data"
  ],
  "fields": [
   {
-   "fieldname": "type_of_waste",
-   "fieldtype": "Data",
-   "label": "Type of Waste",
-   "unique": 1
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
   },
   {
-   "fieldname": "unit",
+   "fieldname": "month",
    "fieldtype": "Data",
-   "label": "Unit"
+   "label": "Month"
   },
   {
-   "default": "1",
-   "fieldname": "mandatory",
-   "fieldtype": "Check",
-   "label": "Mandatory"
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year"
+  },
+  {
+   "fieldname": "report_data",
+   "fieldtype": "Long Text",
+   "label": "Report Data",
+   "options": "JSON"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-16 16:35:21.434167",
+ "modified": "2026-04-16 17:43:04.559156",
  "modified_by": "Administrator",
  "module": "HSE",
- "name": "Waste",
- "naming_rule": "By fieldname",
+ "name": "HSE Monthly Report",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
