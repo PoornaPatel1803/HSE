@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "autoname": "format:{project}-{type_of_work_permit}-{####}",
+ "creation": "2026-04-16 18:18:21.475523",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "permit_details_section",
+  "project",
+  "employee",
+  "shift",
+  "column_break_rhhh",
+  "dateandtime_from",
+  "dateandtime_to",
+  "extended_date_time",
+  "column_break_rsvf",
+  "location_of_permit",
+  "type_of_work_permit",
+  "section_break_ykzl",
+  "noof_workman",
+  "name_of_originating_staff",
+  "name_of_executing_staff",
+  "column_break_swsj",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "permit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Permit Details"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Project Employee"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "1st\n2nd\n3rd\nGeneral\nMix"
+  },
+  {
+   "fieldname": "column_break_rhhh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dateandtime_from",
+   "fieldtype": "Datetime",
+   "label": "Date & Time from"
+  },
+  {
+   "fieldname": "dateandtime_to",
+   "fieldtype": "Datetime",
+   "label": "Date & Time to"
+  },
+  {
+   "fieldname": "extended_date_time",
+   "fieldtype": "Datetime",
+   "label": "Extended Date & Time to"
+  },
+  {
+   "fieldname": "column_break_rsvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_of_permit",
+   "fieldtype": "Data",
+   "label": "Location of Permit"
+  },
+  {
+   "fieldname": "type_of_work_permit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Work Permit",
+   "options": "\nHot Work Permit\nCold Work Permit\nExcavation Permit\nLockout/Tag-out\nHeight Work Permit\nWork at Height\nElectrical Work Permit\nConfined Space Work Permit\nOther Permit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ykzl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "noof_workman",
+   "fieldtype": "Int",
+   "label": "No.of Workmen"
+  },
+  {
+   "fieldname": "name_of_originating_staff",
+   "fieldtype": "Link",
+   "label": "Name of Originating Staff",
+   "options": "Project Employee"
+  },
+  {
+   "fieldname": "name_of_executing_staff",
+   "fieldtype": "Data",
+   "label": "Name of Executing Staff"
+  },
+  {
+   "fieldname": "column_break_swsj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 18:18:21.475523",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Work Permit",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

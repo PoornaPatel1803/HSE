@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{title}-{type}",
+ "creation": "2026-04-16 15:11:28.606515",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doctype_selected",
+  "source_record",
+  "column_break_hspg",
+  "status",
+  "date_andtime",
+  "ll_type",
+  "section_break_hjeo",
+  "title",
+  "type",
+  "incident_location",
+  "column_break_tyqk",
+  "incident_potential",
+  "company",
+  "division",
+  "section_break_ywnm",
+  "description",
+  "causes",
+  "column_break_rkzf",
+  "corrective_actions",
+  "lesson_learned"
+ ],
+ "fields": [
+  {
+   "fieldname": "doctype_selected",
+   "fieldtype": "Link",
+   "label": "Source Type",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_record",
+   "fieldtype": "Dynamic Link",
+   "label": "Source Record",
+   "options": "doctype_selected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hspg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Valid\nInvalid"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_andtime",
+   "fieldtype": "Datetime",
+   "label": "Date and Time"
+  },
+  {
+   "fieldname": "ll_type",
+   "fieldtype": "Select",
+   "label": "Lesson Learned Type",
+   "options": "Internal\nExternal"
+  },
+  {
+   "fieldname": "section_break_hjeo",
+   "fieldtype": "Section Break",
+   "label": "Incident Details"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Incident Title"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Incident Type"
+  },
+  {
+   "fieldname": "incident_location",
+   "fieldtype": "Data",
+   "label": "Incident Location"
+  },
+  {
+   "fieldname": "column_break_tyqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incident_potential",
+   "fieldtype": "Select",
+   "label": "Incident Potential",
+   "options": "Low\nModerate\nHigh"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Data",
+   "label": "Division"
+  },
+  {
+   "fieldname": "section_break_ywnm",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "causes",
+   "fieldtype": "Text",
+   "label": "Causes"
+  },
+  {
+   "fieldname": "column_break_rkzf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "corrective_actions",
+   "fieldtype": "Text",
+   "label": "Corrective Actions"
+  },
+  {
+   "fieldname": "lesson_learned",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Lesson Learned",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 15:11:28.606515",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Lesson Learned",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

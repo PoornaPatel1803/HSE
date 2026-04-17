@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-16 18:04:32.131721",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ngrn",
+  "project",
+  "employee",
+  "custom_employee_name",
+  "email_id",
+  "department",
+  "designation",
+  "column_break_wqwg",
+  "date_of_joining_project",
+  "role_in_committee",
+  "date_of_leaving_project",
+  "custom_mobile_number",
+  "column_break_kfgq",
+  "remarks",
+  "status",
+  "custom_induction_training",
+  "custom_trainings",
+  "custom_trainings_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ngrn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custom_employee_name",
+   "fieldtype": "Data",
+   "label": "Employee  Name"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "column_break_wqwg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_joining_project",
+   "fieldtype": "Date",
+   "label": "Project Joining Date"
+  },
+  {
+   "fieldname": "role_in_committee",
+   "fieldtype": "Select",
+   "label": "Role-In Committee",
+   "options": "Project Manager\nSafety lead\nStore lead\nHR/IR Lead\nQC Lead\nSite In charge\nPainting Supervisor\nScaffolding Supervisor\nOperations Lead\nAdmin"
+  },
+  {
+   "fieldname": "date_of_leaving_project",
+   "fieldtype": "Date",
+   "label": "Project Leaving Date"
+  },
+  {
+   "fieldname": "custom_mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "column_break_kfgq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nOn Leave"
+  },
+  {
+   "default": "0",
+   "fieldname": "custom_induction_training",
+   "fieldtype": "Check",
+   "label": "Induction Training Required?"
+  },
+  {
+   "fieldname": "custom_trainings",
+   "fieldtype": "Section Break",
+   "label": "Trainings"
+  },
+  {
+   "fieldname": "custom_trainings_history",
+   "fieldtype": "Table",
+   "label": "Trainings Record",
+   "options": "Employee Training Record"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-16 18:15:59.011265",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Project Employee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

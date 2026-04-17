@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Format: HSE-{project}",
+ "creation": "2026-04-17 11:02:23.680439",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "safety_commitee_tab",
+  "project",
+  "safety_committee_section",
+  "safety_committee",
+  "scope_tab",
+  "scope_section",
+  "project_hse_formats",
+  "custom_safety_inspections",
+  "custom_audit",
+  "custom_walkthrough",
+  "planning_tab",
+  "section_break_fbyg",
+  "custom_create_custom_planning",
+  "column_break_qyta",
+  "custom_create_scope_planning",
+  "section_break_jerm",
+  "planning",
+  "trainings_tab",
+  "training_summary_section",
+  "create_training_event",
+  "section_break_ebng",
+  "assigned_trainings",
+  "documents_tab",
+  "master_ho_documents_section",
+  "master_ho_documents",
+  "default_ho_documents_section",
+  "table_maqg",
+  "custom_observation",
+  "custom_column_break_eftgf",
+  "custom_create_observation",
+  "custom_column_break_6wgn0",
+  "custom_view_observation",
+  "custom_section_break_q2vid",
+  "custom_html_for_observation",
+  "custom_incident",
+  "custom_create_new_incident",
+  "custom_column_break_jpy5d",
+  "custom_view_incidents",
+  "custom_report",
+  "custom_download_hse_report",
+  "custom_column_break_uuudz",
+  "custom_download_monthly_hse_report",
+  "custom_column_break_hdiir",
+  "custom_download_hse_objective_analysis_report"
+ ],
+ "fields": [
+  {
+   "fieldname": "safety_commitee_tab",
+   "fieldtype": "Tab Break",
+   "label": "Safety Committee"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "safety_committee_section",
+   "fieldtype": "Section Break",
+   "label": "Safety Committee"
+  },
+  {
+   "fieldname": "safety_committee",
+   "fieldtype": "Table",
+   "label": "Safety Committee",
+   "options": "HSE Safety Commitee"
+  },
+  {
+   "fieldname": "scope_tab",
+   "fieldtype": "Tab Break",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "project_hse_formats",
+   "fieldtype": "Table",
+   "label": "Scope",
+   "options": "Project HSE Format"
+  },
+  {
+   "fieldname": "custom_safety_inspections",
+   "fieldtype": "Table",
+   "label": "Inspections",
+   "options": "Safety Inspections"
+  },
+  {
+   "fieldname": "custom_audit",
+   "fieldtype": "Table",
+   "label": "Audit",
+   "options": "Frequency Audit"
+  },
+  {
+   "fieldname": "custom_walkthrough",
+   "fieldtype": "Table",
+   "label": "Walkthrough",
+   "options": "Frequency Walkthrough"
+  },
+  {
+   "fieldname": "planning_tab",
+   "fieldtype": "Tab Break",
+   "label": "Planning"
+  },
+  {
+   "fieldname": "section_break_fbyg",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "description": "<b>Note:</b> Creates Inspection, Audit, and Walkthrough plans based on the defined scope. The system will include only those activities that are marked as Applicable and whose frequency is set to Applicable, As and When Required, or New Project.",
+   "fieldname": "custom_create_custom_planning",
+   "fieldtype": "Button",
+   "label": "Generate Custom Plan"
+  },
+  {
+   "fieldname": "column_break_qyta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "<b>Note:</b> Generates the initial scope plan when the HSE Charter is created. After this, planning will be handled automatically by the system.",
+   "fieldname": "custom_create_scope_planning",
+   "fieldtype": "Button",
+   "label": "Generate Initial Scope Plan"
+  },
+  {
+   "fieldname": "section_break_jerm",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "planning",
+   "fieldtype": "Table",
+   "label": "Planning",
+   "options": "Planning"
+  },
+  {
+   "fieldname": "trainings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Trainings"
+  },
+  {
+   "fieldname": "training_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Training Summary"
+  },
+  {
+   "fieldname": "create_training_event",
+   "fieldtype": "Button",
+   "label": "Create Training Event"
+  },
+  {
+   "fieldname": "section_break_ebng",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assigned_trainings",
+   "fieldtype": "Table",
+   "label": "Assigned Trainings",
+   "options": "Assigned Trainings"
+  },
+  {
+   "fieldname": "documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "master_ho_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Master HO Documents"
+  },
+  {
+   "fieldname": "master_ho_documents",
+   "fieldtype": "Table",
+   "options": "Master HO Documents"
+  },
+  {
+   "fieldname": "default_ho_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Default HO Documents"
+  },
+  {
+   "fieldname": "table_maqg",
+   "fieldtype": "Table",
+   "options": "Default HO Documents"
+  },
+  {
+   "fieldname": "custom_observation",
+   "fieldtype": "Tab Break",
+   "label": "Observations"
+  },
+  {
+   "fieldname": "custom_column_break_eftgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_create_observation",
+   "fieldtype": "Button",
+   "label": "Create Observation"
+  },
+  {
+   "fieldname": "custom_column_break_6wgn0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_view_observation",
+   "fieldtype": "Button",
+   "label": "View Observation"
+  },
+  {
+   "fieldname": "custom_section_break_q2vid",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "custom_html_for_observation",
+   "fieldtype": "HTML",
+   "label": "Html for observation"
+  },
+  {
+   "fieldname": "custom_incident",
+   "fieldtype": "Tab Break",
+   "label": "Incidents"
+  },
+  {
+   "fieldname": "custom_create_new_incident",
+   "fieldtype": "Button",
+   "label": "Create New Incident"
+  },
+  {
+   "fieldname": "custom_column_break_jpy5d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_view_incidents",
+   "fieldtype": "Button",
+   "label": "View Incidents"
+  },
+  {
+   "fieldname": "custom_report",
+   "fieldtype": "Tab Break",
+   "label": "Report"
+  },
+  {
+   "fieldname": "custom_download_hse_report",
+   "fieldtype": "Button",
+   "label": "Download Daily HSE Report"
+  },
+  {
+   "fieldname": "custom_column_break_uuudz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_download_monthly_hse_report",
+   "fieldtype": "Button",
+   "label": "Download Monthly HSE Report"
+  },
+  {
+   "fieldname": "custom_column_break_hdiir",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_download_hse_objective_analysis_report",
+   "fieldtype": "Button",
+   "label": "Download HSE Objective Analysis Report"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-17 11:02:23.680439",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "HSE Charter",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-17 11:01:26.643029",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_type",
+  "activity_name",
+  "plantlocation",
+  "equipment",
+  "equipment_name",
+  "inspection_area",
+  "inspection_type",
+  "report_reference",
+  "column_break_xlhp",
+  "status",
+  "planned_date",
+  "completion_date",
+  "inspector",
+  "create_checklist",
+  "inspection_checklist",
+  "inspection_checklist_status"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "depends_on": "eval:doc.activity_type ==\"Inspection\"",
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activity Type",
+   "options": "Inspection\nAudit\nWalkthrough",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval:doc.activity_type",
+   "fieldname": "activity_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "options": "HSE Activity"
+  },
+  {
+   "fieldname": "plantlocation",
+   "fieldtype": "Data",
+   "label": "Plant/Location"
+  },
+  {
+   "fieldname": "equipment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Serialised Equipment",
+   "options": "Serial No"
+  },
+  {
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Equipment Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspection_area",
+   "fieldtype": "Data",
+   "label": "Inspection Area"
+  },
+  {
+   "depends_on": "eval:doc.activity_type ==\"Inspection\"",
+   "fieldname": "inspection_type",
+   "fieldtype": "Select",
+   "label": "Inspection Type",
+   "mandatory_depends_on": "eval:doc.activity_type ==\"Inspection\"",
+   "options": "Internal\nExternal\nThird-Party"
+  },
+  {
+   "fieldname": "report_reference",
+   "fieldtype": "Attach",
+   "label": "Report Reference"
+  },
+  {
+   "fieldname": "column_break_xlhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planned\nIn Progress\nCompleted\nOverdue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned Date"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Data",
+   "label": "Conducted By"
+  },
+  {
+   "depends_on": "eval:!doc.inspection_checklist",
+   "fieldname": "create_checklist",
+   "fieldtype": "Button",
+   "label": "Create Checklist"
+  },
+  {
+   "fieldname": "inspection_checklist",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Inspection Checklist",
+   "options": "Inspection Checklist",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.inspection_checklist",
+   "fieldname": "inspection_checklist_status",
+   "fieldtype": "Data",
+   "label": "Inspection Checklist Status",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-17 11:01:26.643029",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Planning",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

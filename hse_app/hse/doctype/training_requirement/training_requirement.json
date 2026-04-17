@@ -1,42 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:type_of_waste",
- "creation": "2026-04-16 11:25:12.561860",
+ "creation": "2026-04-16 18:20:02.881857",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "type_of_waste",
-  "unit",
-  "mandatory"
+  "designation",
+  "trainings"
  ],
  "fields": [
   {
-   "fieldname": "type_of_waste",
-   "fieldtype": "Data",
-   "label": "Type of Waste",
-   "unique": 1
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation",
+   "reqd": 1
   },
   {
-   "fieldname": "unit",
-   "fieldtype": "Data",
-   "label": "Unit"
-  },
-  {
-   "default": "1",
-   "fieldname": "mandatory",
-   "fieldtype": "Check",
-   "label": "Mandatory"
+   "fieldname": "trainings",
+   "fieldtype": "Table",
+   "label": "Trainings",
+   "options": "Training Requirements Item",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-16 16:35:21.434167",
+ "modified": "2026-04-16 18:20:02.881857",
  "modified_by": "Administrator",
  "module": "HSE",
- "name": "Waste",
- "naming_rule": "By fieldname",
+ "name": "Training Requirement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -53,7 +48,6 @@
   }
  ],
  "row_format": "Dynamic",
- "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
