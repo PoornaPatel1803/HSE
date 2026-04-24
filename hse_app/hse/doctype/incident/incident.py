@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class HSEMonthlyReport(Document):
+class Incident(Document):
 	pass

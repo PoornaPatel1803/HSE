@@ -1,0 +1,775 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{type_of_incident}-{project_name}-{date_reported}",
+ "creation": "2026-04-23 17:55:18.327156",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yffo",
+  "select_xafn",
+  "type_of_incident_section",
+  "type_of_incident",
+  "column_break_zwgo",
+  "date_reported",
+  "details_of_incident_section",
+  "project_name",
+  "column_break_qvhd",
+  "plant",
+  "exact_location",
+  "date",
+  "time",
+  "first_aid_details_section",
+  "name_of_patient",
+  "first_aider_name",
+  "column_break_bugx",
+  "initials",
+  "reported",
+  "details_of_injury_section",
+  "name_of_injured",
+  "fathers_name",
+  "age",
+  "column_break_qmjb",
+  "sex",
+  "designation",
+  "departmet",
+  "section_break_ptph",
+  "type_of_accident",
+  "column_break_cgyd",
+  "describe_the_injury__damage_part",
+  "section_break_ztnw",
+  "brief_description_of_incident_after_discussion",
+  "column_break_jlqd",
+  "probable_cause_of_accident",
+  "section_break_vbtf",
+  "whether_there_was_any_unsafe_condition",
+  "whether_medical_aid_was_given",
+  "whether_person_was_hospitalized",
+  "protective_equipment",
+  "column_break_sxgj",
+  "whether_any_unsafe_act_by_injured_person",
+  "was_heshe_under_the_influence_of_alcohol__drugs",
+  "inform_to_factory_inspector",
+  "ppe_used",
+  "section_break_wefx",
+  "how_the_injury_occurred",
+  "location_of_injury",
+  "object_causing_injury",
+  "column_break_wixa",
+  "first_aid_immediate_actions_taken",
+  "actions_taken_at_site_to_prevent_injury_to_others",
+  "treatment_provided",
+  "section_break_ezds",
+  "personal_accident",
+  "fall",
+  "cyanosis",
+  "column_break_rlea",
+  "chemical",
+  "mechanical",
+  "electrical",
+  "column_break_jykm",
+  "fireexplosion",
+  "others_check",
+  "check_fall",
+  "section_break_mbbb",
+  "describe_accident",
+  "event_tick_as_applicable_section",
+  "column_break_juop",
+  "non_recordable_incident",
+  "first_aid_injury",
+  "medical_treatment_case",
+  "property_damage",
+  "material_loss",
+  "environment_pollution",
+  "othrs_non_recordable",
+  "column_break_nvdm",
+  "recordable_incident",
+  "lti",
+  "others_recordable",
+  "mldman_lost_days",
+  "kind_of_observation_section",
+  "column_break_obfi",
+  "type_of_concern",
+  "unsafe_act",
+  "unsafe_condition_of_area",
+  "unsafe_condition_of_equipment",
+  "safety_policy_violation",
+  "unsafe_use_of_equipment",
+  "oher",
+  "describe_others",
+  "column_break_qevd",
+  "kind_of_observation",
+  "near_miss",
+  "safety_concern",
+  "safety_ideasuggestion",
+  "other",
+  "describe_other",
+  "section_break_bthc",
+  "describe_potential",
+  "recommendation",
+  "column_break_ejkx",
+  "safety_procedures",
+  "incident_site_inspection",
+  "section_break_vaff",
+  "witnesses"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yffo",
+   "fieldtype": "Section Break",
+   "label": "Recordable/Non-Recordable"
+  },
+  {
+   "fieldname": "select_xafn",
+   "fieldtype": "Select",
+   "label": "Recordable or Non-Recordable",
+   "options": "Recordable\nNon-Recordable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_incident_section",
+   "fieldtype": "Section Break",
+   "label": "Type of Incident"
+  },
+  {
+   "fieldname": "type_of_incident",
+   "fieldtype": "Select",
+   "label": "Type of Incident",
+   "options": "\nAccident\nNear Miss\nHSE Violation\nFirst Aid\nProperty Loss",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zwgo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_reported",
+   "fieldtype": "Datetime",
+   "label": "Date Reported",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details_of_incident_section",
+   "fieldtype": "Section Break",
+   "label": "Location Details"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "label": "Project Name",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qvhd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Data",
+   "label": "Plant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exact_location",
+   "fieldtype": "Data",
+   "label": "Exact Location"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "hidden": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "first_aid_details_section",
+   "fieldtype": "Section Break",
+   "label": "First Aid Details"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"First Aid\"",
+   "fieldname": "name_of_patient",
+   "fieldtype": "Data",
+   "label": "Name of patient"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"First Aid\"",
+   "fieldname": "first_aider_name",
+   "fieldtype": "Data",
+   "label": "First Aider name"
+  },
+  {
+   "fieldname": "column_break_bugx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"First Aid\"",
+   "fieldname": "initials",
+   "fieldtype": "Data",
+   "label": "Initials"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"First Aid\"\n",
+   "fieldname": "reported",
+   "fieldtype": "Select",
+   "label": "Reported",
+   "options": "Yes\nNo"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_of_injury_section",
+   "fieldtype": "Section Break",
+   "label": "Details of Patient"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "name_of_injured",
+   "fieldtype": "Data",
+   "label": "Name of Injured"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "fathers_name",
+   "fieldtype": "Data",
+   "label": "Father's Name"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_qmjb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "sex",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "departmet",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "section_break_ptph",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "type_of_accident",
+   "fieldtype": "Select",
+   "label": "Type Of Accident",
+   "options": "\nMTC:Medical Treatment case\nLTI:Lost Time Accident\nFAC:First Aid Cases\nFatality"
+  },
+  {
+   "fieldname": "column_break_cgyd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "describe_the_injury__damage_part",
+   "fieldtype": "Small Text",
+   "label": "Describe the injury  / damage part"
+  },
+  {
+   "fieldname": "section_break_ztnw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "brief_description_of_incident_after_discussion",
+   "fieldtype": "Small Text",
+   "label": "Brief description of incident after discussion"
+  },
+  {
+   "fieldname": "column_break_jlqd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "probable_cause_of_accident",
+   "fieldtype": "Small Text",
+   "label": "Probable cause of Accident"
+  },
+  {
+   "fieldname": "section_break_vbtf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "whether_there_was_any_unsafe_condition",
+   "fieldtype": "Select",
+   "label": "Whether there was any unsafe condition ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "whether_medical_aid_was_given",
+   "fieldtype": "Select",
+   "label": "Whether medical aid was given ",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "whether_person_was_hospitalized",
+   "fieldtype": "Select",
+   "label": "Whether person was hospitalized ",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "protective_equipment",
+   "fieldtype": "Select",
+   "label": "Whether the person was wearing protective equipment. If Yes, relevant PPE used  ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_sxgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "whether_any_unsafe_act_by_injured_person",
+   "fieldtype": "Select",
+   "label": "Whether any unsafe act by injured person ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "was_heshe_under_the_influence_of_alcohol__drugs",
+   "fieldtype": "Select",
+   "label": "Was he/she under the influence of Alcohol / Drugs ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "inform_to_factory_inspector",
+   "fieldtype": "Select",
+   "label": "Inform to Factory Inspector ",
+   "options": "\nYes\nNo\nN/A"
+  },
+  {
+   "depends_on": "eval: doc.protective_equipment==\"Yes\"",
+   "fieldname": "ppe_used",
+   "fieldtype": "Data",
+   "label": "PPE used"
+  },
+  {
+   "fieldname": "section_break_wefx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"First Aid\"",
+   "fieldname": "how_the_injury_occurred",
+   "fieldtype": "Small Text",
+   "label": "How the injury occurred"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"",
+   "fieldname": "location_of_injury",
+   "fieldtype": "Small Text",
+   "label": "Location of Injury"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"",
+   "fieldname": "object_causing_injury",
+   "fieldtype": "Small Text",
+   "label": "Object causing Injury"
+  },
+  {
+   "fieldname": "column_break_wixa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "first_aid_immediate_actions_taken",
+   "fieldtype": "Small Text",
+   "label": "First Aid/ Immediate actions taken"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "actions_taken_at_site_to_prevent_injury_to_others",
+   "fieldtype": "Small Text",
+   "label": "Actions Taken at site to prevent injury to others"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"First Aid\"",
+   "fieldname": "treatment_provided",
+   "fieldtype": "Small Text",
+   "label": "Treatment Provided"
+  },
+  {
+   "fieldname": "section_break_ezds",
+   "fieldtype": "Section Break",
+   "label": "Accident that has occurred ( Tick as applicable ) "
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "personal_accident",
+   "fieldtype": "Check",
+   "label": "Personal Accident"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "fall",
+   "fieldtype": "Check",
+   "label": "Struck By"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "cyanosis",
+   "fieldtype": "Check",
+   "label": "Cyanosis"
+  },
+  {
+   "fieldname": "column_break_rlea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "chemical",
+   "fieldtype": "Check",
+   "label": "Chemical"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "mechanical",
+   "fieldtype": "Check",
+   "label": "Mechanical"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "electrical",
+   "fieldtype": "Check",
+   "label": "Electrical"
+  },
+  {
+   "fieldname": "column_break_jykm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "fireexplosion",
+   "fieldtype": "Check",
+   "label": "Fire/Explosion"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "others_check",
+   "fieldtype": "Check",
+   "label": "Others(Specify)"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\"\n",
+   "fieldname": "check_fall",
+   "fieldtype": "Check",
+   "label": "Fall"
+  },
+  {
+   "fieldname": "section_break_mbbb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.others_check==1 || doc.others_recordable == 1 || doc.othrs_non_recordable == 1",
+   "fieldname": "describe_accident",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Describe Accident"
+  },
+  {
+   "fieldname": "event_tick_as_applicable_section",
+   "fieldtype": "Section Break",
+   "label": "Event (Tick as applicable) "
+  },
+  {
+   "fieldname": "column_break_juop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "non_recordable_incident",
+   "fieldtype": "Heading",
+   "label": "Non Recordable Incident "
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "first_aid_injury",
+   "fieldtype": "Check",
+   "label": "First-Aid Injury"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "medical_treatment_case",
+   "fieldtype": "Check",
+   "label": "Medical Treatment Case"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "property_damage",
+   "fieldtype": "Check",
+   "label": "Property Damage"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "material_loss",
+   "fieldtype": "Check",
+   "label": "Material loss"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "environment_pollution",
+   "fieldtype": "Check",
+   "label": "Environment pollution"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "othrs_non_recordable",
+   "fieldtype": "Check",
+   "label": "Others "
+  },
+  {
+   "fieldname": "column_break_nvdm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "recordable_incident",
+   "fieldtype": "Heading",
+   "label": "Recordable Incident "
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "lti",
+   "fieldtype": "Check",
+   "label": "LTI"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Accident\" || doc.type_of_incident==\"Property Loss\" || doc.type_of_incident==\"HSE Violation\"\n",
+   "fieldname": "others_recordable",
+   "fieldtype": "Check",
+   "label": "Others"
+  },
+  {
+   "depends_on": "eval:doc.lti==1",
+   "fieldname": "mldman_lost_days",
+   "fieldtype": "Data",
+   "label": "MLD(Man Lost days)"
+  },
+  {
+   "fieldname": "kind_of_observation_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_obfi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "type_of_concern",
+   "fieldtype": "Heading",
+   "label": "Type of Concern"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "unsafe_act",
+   "fieldtype": "Check",
+   "label": "Unsafe Act",
+   "options": " "
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "unsafe_condition_of_area",
+   "fieldtype": "Check",
+   "label": "Unsafe Condition of Area"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "unsafe_condition_of_equipment",
+   "fieldtype": "Check",
+   "label": "\u200bUnsafe Condition of Equipment"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "safety_policy_violation",
+   "fieldtype": "Check",
+   "label": "Safety policy violation"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "unsafe_use_of_equipment",
+   "fieldtype": "Check",
+   "label": "\u200bUnsafe Use of Equipment"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "oher",
+   "fieldtype": "Check",
+   "label": "\u200b\u200bOther "
+  },
+  {
+   "depends_on": "eval:doc.oher==\"1\" ",
+   "fieldname": "describe_others",
+   "fieldtype": "Small Text",
+   "label": "Describe others"
+  },
+  {
+   "fieldname": "column_break_qevd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "kind_of_observation",
+   "fieldtype": "Heading",
+   "label": "Kind of Observation"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "near_miss",
+   "fieldtype": "Check",
+   "label": "Near Miss"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "safety_concern",
+   "fieldtype": "Check",
+   "label": "Safety Concern"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "safety_ideasuggestion",
+   "fieldtype": "Check",
+   "label": "Safety Idea/Suggestion"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "depends_on": "eval:doc.other==1 && doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "describe_other",
+   "fieldtype": "Small Text",
+   "label": "Describe other"
+  },
+  {
+   "fieldname": "section_break_bthc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "describe_potential",
+   "fieldtype": "Small Text",
+   "label": "Describe the potential incident/hazard/concern and possible outcome (be detailed):    "
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "recommendation",
+   "fieldtype": "Small Text",
+   "label": "Recommendations/steps to take to prevent a similar incident: "
+  },
+  {
+   "fieldname": "column_break_ejkx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "safety_procedures",
+   "fieldtype": "Small Text",
+   "label": "Were safety procedures violated? (describe): "
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident==\"Near Miss\"",
+   "fieldname": "incident_site_inspection",
+   "fieldtype": "Small Text",
+   "label": "Incident site inspection \u2013 Why was an unsafe act committed, or why was the unsafe condition present? "
+  },
+  {
+   "fieldname": "section_break_vaff",
+   "fieldtype": "Section Break",
+   "label": "Witnesses"
+  },
+  {
+   "depends_on": "eval:doc.type_of_incident",
+   "fieldname": "witnesses",
+   "fieldtype": "Table",
+   "label": "Witnesses",
+   "options": "Witness"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-23 17:55:18.327156",
+ "modified_by": "Administrator",
+ "module": "HSE",
+ "name": "Incident",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
