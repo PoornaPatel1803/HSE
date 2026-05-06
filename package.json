@@ -1,0 +1,15 @@
+{
+  "name": "hse_app",
+  "version": "1.0.0",
+  "description": "Health Safety Environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd hse && yarn install",
+    "dev": "cd hse && yarn dev",
+    "build": "cd hse && yarn build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

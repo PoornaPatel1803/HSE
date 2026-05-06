@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestHSEDailyReport(FrappeTestCase):
+class TestIncident(FrappeTestCase):
 	pass

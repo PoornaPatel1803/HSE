@@ -43,13 +43,7 @@
   "custom_incident",
   "custom_create_new_incident",
   "custom_column_break_jpy5d",
-  "custom_view_incidents",
-  "custom_report",
-  "custom_download_hse_report",
-  "custom_column_break_uuudz",
-  "custom_download_monthly_hse_report",
-  "custom_column_break_hdiir",
-  "custom_download_hse_objective_analysis_report"
+  "custom_view_incidents"
  ],
  "fields": [
   {
@@ -250,40 +244,12 @@
    "fieldname": "custom_view_incidents",
    "fieldtype": "Button",
    "label": "View Incidents"
-  },
-  {
-   "fieldname": "custom_report",
-   "fieldtype": "Tab Break",
-   "label": "Report"
-  },
-  {
-   "fieldname": "custom_download_hse_report",
-   "fieldtype": "Button",
-   "label": "Download Daily HSE Report"
-  },
-  {
-   "fieldname": "custom_column_break_uuudz",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "custom_download_monthly_hse_report",
-   "fieldtype": "Button",
-   "label": "Download Monthly HSE Report"
-  },
-  {
-   "fieldname": "custom_column_break_hdiir",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "custom_download_hse_objective_analysis_report",
-   "fieldtype": "Button",
-   "label": "Download HSE Objective Analysis Report"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-17 11:02:23.680439",
+ "modified": "2026-04-23 16:04:15.067629",
  "modified_by": "Administrator",
  "module": "HSE",
  "name": "HSE Charter",
