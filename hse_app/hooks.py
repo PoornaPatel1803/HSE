@@ -5,6 +5,52 @@ app_description = "Health Safety Environment"
 app_email = "Poorna@gmail.com"
 app_license = "mit"
 
+ 
+doc_events = {
+ 
+    # Training Event → on_submit: mark Assigned Trainings as Completed
+    "Training Event": {
+        "on_submit": "hse_app.hse.doctype.training_event.training_event.TrainingEvent.on_submit"
+    },
+ 
+    # Project → after_insert: auto-create HSE Charter
+    "Project": {
+        "after_insert": "hse_app.hse.project_hooks.create_hse_charter"
+    },
+ 
+    # Inspection Checklist → on_update: sync status to Planning row
+    "Inspection Checklist": {
+        "on_update": "hse_app.hse.doctype.inspection_checklist.inspection_checklist.InspectionChecklist.on_update"
+    },
+}
+ 
+ 
+# ---------------------------------------------------------------------------
+#  Scheduler Events
+# ---------------------------------------------------------------------------
+ 
+scheduler_events = {
+ 
+    "daily": [
+        "hse_app.scheduled_tasks.assign_inspection_daily",
+        "hse_app.scheduled_tasks.assign_audit_daily",
+        "hse_app.scheduled_tasks.assign_walkthrough_daily",
+    ],
+ 
+    "weekly": [
+        "hse_app.scheduled_tasks.assign_inspection_weekly",
+        "hse_app.scheduled_tasks.assign_audit_weekly",
+        "hse_app.scheduled_tasks.assign_walkthrough_weekly",
+    ],
+ 
+    "monthly": [
+        "hse_app.scheduled_tasks.assign_inspection_monthly",
+        "hse_app.scheduled_tasks.assign_audit_monthly",
+        "hse_app.scheduled_tasks.assign_walkthrough_monthly",
+    ],
+}
+ 
+
 # Apps
 # ------------------
 
@@ -247,3 +293,5 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+website_route_rules = [{'from_route': '/hse/<path:app_path>', 'to_route': 'hse'},]

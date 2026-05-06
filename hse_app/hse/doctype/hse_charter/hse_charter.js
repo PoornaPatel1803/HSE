@@ -455,135 +455,6 @@ frappe.ui.form.on("HSE Charter", {
 				});
 		}
 
-		// ── Report buttons (bound once on onload) ─────────────
-		// Daily Report button
-		if (frm.fields_dict.custom_download_hse_report) {
-			style_button(frm.fields_dict.custom_download_hse_report.$input, { width: "240px" });
-			frm.fields_dict.custom_download_hse_report.$input
-				.off("click")
-				.on("click", () => open_hse_dialog(frm));
-		}
-
-		// Monthly HSE report button
-		if (frm.fields_dict.custom_download_monthly_hse_report) {
-			style_button(frm.fields_dict.custom_download_monthly_hse_report.$input);
-			frm.fields_dict.custom_download_monthly_hse_report.$input
-				.off("click")
-				.on("click", function () {
-					let d = new frappe.ui.Dialog({
-						title: "Download Monthly HSE Report",
-						fields: [
-							{
-								label: "Month",
-								fieldname: "monthly_month",
-								fieldtype: "Select",
-								options: [
-									"January",
-									"February",
-									"March",
-									"April",
-									"May",
-									"June",
-									"July",
-									"August",
-									"September",
-									"October",
-									"November",
-									"December",
-								],
-								reqd: 1,
-							},
-							{
-								label: "Year (for Monthly)",
-								fieldname: "monthly_year",
-								fieldtype: "Select",
-								options: ["2024", "2025", "2026", "2027"],
-								reqd: 1,
-							},
-						],
-						primary_action_label: "Download Excel",
-						primary_action(values) {
-							if (!values.monthly_month) {
-								frappe.msgprint("Please select month.");
-								return;
-							}
-							const monthIndex = monthNameToNumber(values.monthly_month);
-							const selYear = parseInt(values.monthly_year);
-							const now = new Date();
-							if (
-								selYear > now.getFullYear() ||
-								(selYear === now.getFullYear() && monthIndex > now.getMonth() + 1)
-							) {
-								frappe.msgprint({
-									title: "Invalid Selection",
-									message: "You cannot select a future month.",
-									indicator: "red",
-								});
-								return;
-							}
-							d.hide();
-							const run = () => generate_hse_month_excel(frm, values);
-							if (typeof ExcelJS === "undefined") {
-								frappe.require(
-									[
-										"https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js",
-										"https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js",
-									],
-									run,
-								);
-							} else {
-								run();
-							}
-						},
-					});
-					d.show();
-				});
-		}
-
-		// Objective Analysis button
-		if (frm.fields_dict.custom_download_hse_objective_analysis_report) {
-			style_button(frm.fields_dict.custom_download_hse_objective_analysis_report.$input, {
-				"white-space": "nowrap",
-			});
-			frm.fields_dict.custom_download_hse_objective_analysis_report.$input
-				.off("click")
-				.on("click", function () {
-					let d = new frappe.ui.Dialog({
-						title: "Download Objective Analysis Report",
-						fields: [
-							{
-								label: "For Year",
-								fieldname: "monthly_year",
-								fieldtype: "Select",
-								options: ["2024", "2025", "2026"],
-								reqd: 1,
-							},
-						],
-						primary_action_label: "Download Excel",
-						primary_action(values) {
-							if (!values.monthly_year) {
-								frappe.msgprint("Please select year.");
-								return;
-							}
-							d.hide();
-							const run = () => generate_analysis_excel(frm, values);
-							if (typeof ExcelJS === "undefined") {
-								frappe.require(
-									[
-										"https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js",
-										"https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js",
-									],
-									run,
-								);
-							} else {
-								run();
-							}
-						},
-					});
-					d.show();
-				});
-		}
-
 		// ── Employee filter (set on load) ─────────────────────
 		set_project_employee_filter(frm);
 	},
@@ -892,7 +763,14 @@ frappe.ui.form.on("HSE Charter", {
 
 			// Style the Create Training Event button
 			const $create_btn = frm.fields_dict.create_training_event.$input;
+
 			$create_btn.css({ "white-space": "nowrap" });
+
+			// ✅ ADD THIS
+			$create_btn.parent().css({
+				display: "flex",
+				"align-items": "center",
+			});
 
 			// Assign Trainings
 			const $assign_btn = $(`<button class="btn btn-secondary btn-sm"
