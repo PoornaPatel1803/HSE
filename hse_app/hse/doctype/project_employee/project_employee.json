@@ -54,6 +54,7 @@
    "label": "Email"
   },
   {
+   "fetch_from": "employee.prefered_email",
    "fieldname": "department",
    "fieldtype": "Data",
    "label": "Department"
@@ -124,7 +125,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-16 18:15:59.011265",
+ "modified": "2026-05-06 15:54:29.438350",
  "modified_by": "Administrator",
  "module": "HSE",
  "name": "Project Employee",

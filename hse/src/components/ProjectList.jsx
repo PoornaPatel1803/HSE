@@ -5,6 +5,7 @@ import {
   useFrappeDocTypeEventListener,
 } from "frappe-react-sdk";
 import { Search, FileText, Plus } from "lucide-react";
+import DashboardStats from "./DashboardStats.jsx";
 
 export default function ProjectList() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export default function ProjectList() {
     mutate: refreshProjects,
   } = useFrappeGetDocList("Project", {
     fields: ["name", "project_name", "status"],
-    limit: 100,
+    limit: 0,
     orderBy: { field: "modified", order: "desc" },
   });
 
@@ -25,7 +26,7 @@ export default function ProjectList() {
     "HSE Charter",
     {
       fields: ["name", "project"],
-      limit: 100,
+      limit: 0,
     },
   );
 
@@ -45,6 +46,7 @@ export default function ProjectList() {
 
   return (
     <main className="max-w-7xl mx-auto p-6">
+      <DashboardStats projects={projects} charters={charters} />
       <div className="card">
         <div className="card-header flex items-center justify-between gap-4">
           {/* LEFT SIDE */}
